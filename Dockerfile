@@ -22,4 +22,5 @@ COPY . .
 EXPOSE 3000
 
 # Start the application
+#TODO change to dev.Dockerfile and normal Dockerfile
 CMD [ "npm", "start" ]
