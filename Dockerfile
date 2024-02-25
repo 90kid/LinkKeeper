@@ -4,19 +4,20 @@ FROM node:18-alpine
 # FROM  --platform=linux/amd64 node:16.14.0-alpine
 
 # Set the working directory
-WORKDIR /usr/src/app
-
-# Copy package.json and package-lock.json
-COPY package*.json ./
-
-# Copy .env.example to .env
-COPY .env.example .env
-
-# Install dependencies
-RUN npm install
+WORKDIR /app
 
 # Copy the application files
 COPY . .
+
+# Copy .env.example to .env
+RUN cat .env.example
+
+COPY .env.example .env
+
+RUN cat .env
+
+# Install dependencies
+RUN npm install
 
 # Expose the port
 EXPOSE 3000
