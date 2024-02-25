@@ -7,4 +7,5 @@ services:
     environment:
       - PORT=3000
     volumes:
-      - .:/usr/src/app
+      - .:/app
+      - /app/node_modules
