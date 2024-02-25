@@ -16,7 +16,8 @@ COPY .env.example .env
 
 RUN cat .env
 
-# Install dependencies
+# Install dependencies - to jest do wywalenia ponieważ i tak zostanie napisane przez połączenie volumena z docker-compose.yml
+# TODO
 RUN npm install
 
 # Expose the port
