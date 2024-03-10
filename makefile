@@ -25,5 +25,5 @@ install-dependencies:
 generate-prisma:
 	docker-compose run --rm app npx prisma generate
 
-cs-fix:
-	docker-compose run --rm app npx eslint .
+lint:
+	docker-compose exec app npm run lint
