@@ -6,20 +6,6 @@ FROM node:18-alpine
 # Set the working directory
 WORKDIR /app
 
-# Copy the application files
-COPY . .
-
-# Copy .env.example to .env
-RUN cat .env.example
-
-COPY .env.example .env
-
-RUN cat .env
-
-# Install dependencies - to jest do wywalenia ponieważ i tak zostanie napisane przez połączenie volumena z docker-compose.yml
-# TODO
-RUN npm install
-
 # Expose the port
 EXPOSE 3000
 
