@@ -3,6 +3,7 @@
 PROJECT_NAME=link-keeper
 
 build:
+	cp .env.example .env
 	docker-compose build
 	make install-dependencies
 
@@ -20,3 +21,6 @@ shell:
 
 install-dependencies:
 	docker-compose run --rm app npm install
+
+generate-prisma:
+	docker-compose run --rm app npx prisma generate
