@@ -1,11 +1,13 @@
-import express, { Request, Response } from 'express';
+import express, { Request, Response } from "express";
 
 const app = express();
-const PORT: number = parseInt(process.env.PORT || '3000');
 
-app.get('/', (req: Request, res: Response) => {
+const PORT: number = parseInt(process.env.PORT || "3000");
+
+app.get("/", (req: Request, res: Response) => {
   console.log(`Dawid!`);
-  res.send('Hello, Docker!');
+
+  res.send("Hello, Docker!");
 });
 
 app.listen(PORT, () => {
