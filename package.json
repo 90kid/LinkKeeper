@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Organize your links, find them fast.",
   "main": "./src/app.ts",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon",
@@ -25,8 +26,10 @@
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
+    "eslint": "^8.57.0",
     "nodemon": "^3.1.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.3.3"
+    "typescript": "^5.4.2",
+    "typescript-eslint": "^7.1.1"
   }
 }
